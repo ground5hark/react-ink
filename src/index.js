@@ -37,7 +37,7 @@ let Ink = React.createClass({
       radius     : 150,
       recenter   : true,
       hasTouch   : HAS_TOUCH,
-      color:     : 'transparent'
+      color      : 'transparent'
     }
   },
 
