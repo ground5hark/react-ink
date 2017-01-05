@@ -25,7 +25,8 @@ let Ink = React.createClass({
     opacity    : Types.number,
     radius     : Types.number,
     recenter   : Types.bool,
-    hasTouch   : Types.bool
+    hasTouch   : Types.bool,
+    color      : Types.string
   },
 
   getDefaultProps() {
@@ -35,13 +36,14 @@ let Ink = React.createClass({
       opacity    : 0.25,
       radius     : 150,
       recenter   : true,
-      hasTouch   : HAS_TOUCH
+      hasTouch   : HAS_TOUCH,
+      color:     : 'transparent'
     }
   },
 
   getInitialState() {
     return {
-      color       : 'transparent',
+      color       : this.props.color,
       density     : 1,
       height      : 0,
       store       : Store(this.tick),
